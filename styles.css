@@ -20,6 +20,10 @@ body {
     overflow-x: hidden;
 }
 
+body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, select, textarea, .stat-number, .stat-label, .service-link, .footer-section ul li a, .btn-primary, .btn-secondary, .nav-logo, .nav-menu a, .feature, .testimonial-content, .form-message, .form-message.success, .form-message.error {
+    color: var(--black) !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
