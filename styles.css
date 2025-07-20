@@ -965,11 +965,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, select, textarea, .s
     }
 } 
 
-.service-card, .tier-card, .testimonial-card, .process-step, .feature {
-    background: var(--off-white) !important;
+.hero, .services, .about, .process, .cta, .contact, .footer, .service-card, .tier-card, .testimonial-card, .process-step, .feature {
     color: var(--black) !important;
-    border: 1px solid var(--brown) !important;
-    box-shadow: 0 2px 8px rgba(209, 190, 164, 0.08);
 }
 
 .tier-card.featured {
