@@ -570,6 +570,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, select, textarea, .s
 .feature {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -581,6 +582,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, select, textarea, .s
 .feature span {
     font-weight: 500;
     color: #e2e8f0;
+    text-align: center;
 }
 
 .testimonial-card {
