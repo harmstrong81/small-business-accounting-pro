@@ -1,3 +1,10 @@
+:root {
+    --cream: #fff0db;
+    --brown: #d1bea4;
+    --black: #000000;
+    --off-white: #f7f7f7;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -8,8 +15,8 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #e2e8f0;
-    background: #0f172a;
+    color: var(--black);
+    background: var(--cream);
     overflow-x: hidden;
 }
 
@@ -24,11 +31,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(15, 23, 42, 0.95);
+    background: var(--brown);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -45,7 +52,7 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2563eb;
+    color: var(--black);
 }
 
 .nav-logo i {
@@ -61,25 +68,29 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #e2e8f0;
+    color: var(--black);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #2563eb;
+    color: var(--cream);
+    background: var(--brown);
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
 }
 
 .nav-btn {
-    background: #2563eb;
-    color: white !important;
+    background: var(--brown);
+    color: var(--black) !important;
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
     transition: background 0.3s ease;
 }
 
 .nav-btn:hover {
-    background: #1d4ed8;
+    background: var(--off-white);
+    color: var(--black) !important;
 }
 
 .hamburger {
@@ -99,8 +110,8 @@ body {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    color: white;
+    background: var(--off-white);
+    color: var(--black);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -136,8 +147,8 @@ body {
 }
 
 .btn-primary {
-    background: #10b981;
-    color: white;
+    background: var(--brown);
+    color: var(--black);
     border: none;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -150,15 +161,14 @@ body {
 }
 
 .btn-primary:hover {
-    background: #059669;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    background: var(--brown);
+    color: var(--cream);
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--black);
+    border: 2px solid var(--brown);
     padding: 1rem 2rem;
     border-radius: 50px;
     font-size: 1rem;
@@ -168,8 +178,9 @@ body {
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #1e293b;
+    background: var(--off-white);
+    color: var(--brown);
+    border-color: var(--brown);
 }
 
 .hero-stats {
@@ -228,7 +239,8 @@ body {
 /* Services Section */
 .services {
     padding: 80px 0;
-    background: #1e293b;
+    background: var(--cream);
+    color: var(--black);
 }
 
 .section-header {
@@ -240,7 +252,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #f1f5f9;
+    color: var(--brown);
 }
 
 .section-header p {
@@ -310,7 +322,7 @@ body {
 }
 
 .service-link:hover {
-    gap: 1rem;
+    color: var(--brown);
 }
 
 /* Service Tiers */
@@ -432,7 +444,8 @@ body {
 /* Process Section */
 .process {
     padding: 80px 0;
-    background: #334155;
+    background: var(--off-white);
+    color: var(--black);
 }
 
 .process-steps {
@@ -486,7 +499,8 @@ body {
 /* About Section */
 .about {
     padding: 80px 0;
-    background: #0f172a;
+    background: var(--cream);
+    color: var(--black);
 }
 
 .about-content {
@@ -569,8 +583,8 @@ body {
 /* CTA Section */
 .cta {
     padding: 80px 0;
-    background: linear-gradient(135deg, #334155 0%, #475569 100%);
-    color: white;
+    background: var(--brown);
+    color: var(--black);
     text-align: center;
 }
 
@@ -589,7 +603,8 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background: #1e293b;
+    background: var(--off-white);
+    color: var(--black);
 }
 
 .contact-content {
@@ -645,16 +660,16 @@ body {
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #475569;
+    border: 1px solid var(--brown);
     border-radius: 10px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
-    background: #1e293b;
-    color: #e2e8f0;
+    background: var(--off-white);
+    color: var(--black);
 }
 
 .form-group select {
@@ -667,10 +682,11 @@ body {
 }
 
 .form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--brown);
     outline: none;
-    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px var(--brown);
 }
 
 .form-group textarea {
@@ -680,7 +696,7 @@ body {
 
 /* Form Validation and Messages */
 .error-message {
-    color: #ef4444;
+    color: var(--brown);
     font-size: 0.875rem;
     margin-top: 0.5rem;
     display: block;
@@ -748,15 +764,15 @@ body {
 }
 
 .form-message.success {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid #10b981;
-    color: #10b981;
+    background: var(--cream);
+    color: var(--black);
+    border: 1px solid var(--brown);
 }
 
 .form-message.error {
-    background: rgba(239, 68, 68, 0.1);
-    border: 1px solid #ef4444;
-    color: #ef4444;
+    background: var(--off-white);
+    color: var(--brown);
+    border: 1px solid var(--brown);
 }
 
 .form-message i {
@@ -785,9 +801,9 @@ body {
 
 /* Footer */
 .footer {
-    background: #0f172a;
-    color: white;
-    padding: 60px 0 20px;
+    background: var(--brown);
+    color: var(--black);
+    padding: 3rem 0 1rem 0;
 }
 
 .footer-content {
@@ -802,7 +818,7 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #10b981;
+    color: var(--black);
     margin-bottom: 1rem;
 }
 
@@ -842,7 +858,7 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--black);
 }
 
 .footer-section ul {
@@ -854,20 +870,21 @@ body {
 }
 
 .footer-section ul li a {
-    color: #94a3b8;
+    color: var(--black);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #10b981;
+    color: var(--brown);
 }
 
 .footer-bottom {
-    border-top: 1px solid #475569;
-    padding-top: 2rem;
+    color: var(--black);
+    background: var(--cream);
     text-align: center;
-    color: #94a3b8;
+    padding: 1rem 0 0 0;
+    font-size: 0.95rem;
 }
 
 /* Responsive Design */
@@ -942,4 +959,25 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
+} 
+
+.service-card, .tier-card, .testimonial-card, .process-step, .feature {
+    background: var(--off-white) !important;
+    color: var(--black) !important;
+    border: 1px solid var(--brown) !important;
+    box-shadow: 0 2px 8px rgba(209, 190, 164, 0.08);
+}
+
+.tier-card.featured {
+    background: var(--cream) !important;
+    border: 2px solid var(--brown) !important;
+}
+
+.tier-badge {
+    background: var(--brown) !important;
+    color: var(--black) !important;
+}
+
+.service-icon i, .feature i {
+    color: var(--brown) !important;
 } 
