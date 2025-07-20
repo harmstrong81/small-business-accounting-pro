@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - M&A Financial Pro</title>
+    <link rel="stylesheet" href="portal-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Admin Navigation -->
+    <nav class="portal-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>M&A Financial Pro - Admin</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-link active" onclick="showSection('admin-dashboard')">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-link" onclick="showSection('clients')">
+                    <i class="fas fa-users"></i>
+                    Clients
+                </a>
+                <a href="#" class="nav-link" onclick="showSection('projects')">
+                    <i class="fas fa-project-diagram"></i>
+                    Projects
+                </a>
+                <a href="#" class="nav-link" onclick="showSection('team')">
+                    <i class="fas fa-user-tie"></i>
+                    Team
+                </a>
+                <a href="#" class="nav-link" onclick="showSection('billing')">
+                    <i class="fas fa-credit-card"></i>
+                    Billing
+                </a>
+                <a href="#" class="nav-link" onclick="showSection('reports')">
+                    <i class="fas fa-chart-bar"></i>
+                    Reports
+                </a>
+                <a href="#" class="nav-link" onclick="showSection('settings')">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </div>
+            <div class="nav-user">
+                <div class="user-info">
+                    <span class="user-name">Admin User</span>
+                    <span class="user-company">Administrator</span>
+                </div>
+                <div class="user-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="user-dropdown">
+                    <button class="dropdown-btn">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showSection('profile')">Profile</a>
+                        <a href="#" onclick="showSection('settings')">Settings</a>
+                        <a href="login.html">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="portal-main">
+        <!-- Admin Dashboard Section -->
+        <section id="admin-dashboard" class="portal-section active">
+            <div class="section-header">
+                <h1>Admin Dashboard</h1>
+                <p>Manage your M&A and financial modeling business operations</p>
+            </div>
+
+            <!-- Admin Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>156</h3>
+                        <p>Total Clients</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>342</h3>
+                        <p>Active Projects</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>45</h3>
+                        <p>Monthly Subscriptions</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>$45,250</h3>
+                        <p>Monthly Revenue</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>89%</h3>
+                        <p>On-Time Delivery</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Dashboard Grid -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Recent Client Activity</h3>
+                        <a href="#" onclick="showSection('clients')" class="view-all">View All</a>
+                    </div>
+                    <div class="client-activity-list">
+                        <div class="activity-item">
+                            <div class="activity-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>TechStart Inc.</h4>
+                                <p>Initiated M&A due diligence process</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                            <div class="activity-status new">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Global Solutions LLC</h4>
+                                <p>Requested financial modeling update</p>
+                                <span class="activity-time">4 hours ago</span>
+                            </div>
+                            <div class="activity-status pending">
+                                <span>Pending</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Innovation Corp</h4>
+                                <p>Completed business valuation project</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                            <div class="activity-status completed">
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Team Workload</h3>
+                        <a href="#" onclick="showSection('team')" class="view-all">View All</a>
+                    </div>
+                    <div class="team-workload-list">
+                        <div class="workload-item">
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Senior Financial Analyst</p>
+                                </div>
+                            </div>
+                            <div class="workload-stats">
+                                <div class="workload-bar">
+                                    <div class="workload-fill" style="width: 75%"></div>
+                                </div>
+                                <span>75% (15/20 projects)</span>
+                            </div>
+                        </div>
+                        <div class="workload-item">
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Mike Chen</h4>
+                                    <p>M&A Specialist</p>
+                                </div>
+                            </div>
+                            <div class="workload-stats">
+                                <div class="workload-bar">
+                                    <div class="workload-fill" style="width: 60%"></div>
+                                </div>
+                                <span>60% (12/20 projects)</span>
+                            </div>
+                        </div>
+                        <div class="workload-item">
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Emily Davis</h4>
+                                    <p>Financial Analyst</p>
+                                </div>
+                            </div>
+                            <div class="workload-stats">
+                                <div class="workload-bar">
+                                    <div class="workload-fill" style="width: 90%"></div>
+                                </div>
+                                <span>90% (18/20 projects)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button class="action-btn" onclick="showNewClientModal()">
+                        <i class="fas fa-user-plus"></i>
+                        Add New Client
+                    </button>
+                    <button class="action-btn" onclick="showNewProjectModal()">
+                        <i class="fas fa-plus"></i>
+                        Create Project
+                    </button>
+                    <button class="action-btn" onclick="showNewTeamModal()">
+                        <i class="fas fa-user-tie"></i>
+                        Add Team Member
+                    </button>
+                    <button class="action-btn" onclick="showSection('reports')">
+                        <i class="fas fa-download"></i>
+                        Generate Report
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section id="clients" class="portal-section">
+            <div class="section-header">
+                <h1>Client Management</h1>
+                <button class="btn-primary" onclick="showNewClientModal()">
+                    <i class="fas fa-user-plus"></i>
+                    Add New Client
+                </button>
+            </div>
+
+            <div class="clients-container">
+                <div class="client-filters">
+                    <input type="text" placeholder="Search clients..." class="search-input">
+                    <select class="filter-select">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">All Services</option>
+                        <option value="financial-statements">Financial Statements</option>
+                        <option value="tax-preparation">Tax Preparation</option>
+                        <option value="budget-forecasting">Budget & Forecasting</option>
+                    </select>
+                </div>
+
+                <div class="clients-grid">
+                    <div class="client-card">
+                        <div class="client-header">
+                            <div class="client-info">
+                                <h3>TechStart Inc.</h3>
+                                <p>Technology • 15 Projects</p>
+                                <span class="client-status active">Active</span>
+                            </div>
+                            <div class="client-actions">
+                                <button class="action-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-icon" title="Send Message">
+                                    <i class="fas fa-comment"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="client-details">
+                            <p><strong>Contact:</strong> john.smith@techstart.com</p>
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                            <p><strong>Last Activity:</strong> 2 hours ago</p>
+                            <p><strong>Revenue:</strong> $12,450</p>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-header">
+                            <div class="client-info">
+                                <h3>Global Solutions LLC</h3>
+                                <p>Consulting • 8 Projects</p>
+                                <span class="client-status active">Active</span>
+                            </div>
+                            <div class="client-actions">
+                                <button class="action-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-icon" title="Send Message">
+                                    <i class="fas fa-comment"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="client-details">
+                            <p><strong>Contact:</strong> mary.jones@globalsolutions.com</p>
+                            <p><strong>Phone:</strong> (555) 987-6543</p>
+                            <p><strong>Last Activity:</strong> 4 hours ago</p>
+                            <p><strong>Revenue:</strong> $8,750</p>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-header">
+                            <div class="client-info">
+                                <h3>Innovation Corp</h3>
+                                <p>Manufacturing • 22 Projects</p>
+                                <span class="client-status active">Active</span>
+                            </div>
+                            <div class="client-actions">
+                                <button class="action-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-icon" title="Send Message">
+                                    <i class="fas fa-comment"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="client-details">
+                            <p><strong>Contact:</strong> david.brown@innovationcorp.com</p>
+                            <p><strong>Phone:</strong> (555) 456-7890</p>
+                            <p><strong>Last Activity:</strong> 1 day ago</p>
+                            <p><strong>Revenue:</strong> $18,900</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="portal-section">
+            <div class="section-header">
+                <h1>Project Management</h1>
+                <button class="btn-primary" onclick="showNewProjectModal()">
+                    <i class="fas fa-plus"></i>
+                    Create Project
+                </button>
+            </div>
+
+            <div class="projects-container">
+                <div class="project-filters">
+                    <input type="text" placeholder="Search projects..." class="search-input">
+                    <select class="filter-select">
+                        <option value="">All Status</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="pending">Pending Review</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">All Services</option>
+                        <option value="financial-statements">Financial Statements</option>
+                        <option value="tax-preparation">Tax Preparation</option>
+                        <option value="budget-forecasting">Budget & Forecasting</option>
+                    </select>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Q4 Financial Statements - TechStart Inc.</h3>
+                            <div class="project-status in-progress">In Progress</div>
+                        </div>
+                        <div class="project-details">
+                            <p><strong>Client:</strong> TechStart Inc.</p>
+                            <p><strong>Service:</strong> Financial Statement Preparation</p>
+                            <p><strong>Assigned To:</strong> Sarah Johnson</p>
+                            <p><strong>Due Date:</strong> Dec 31, 2024</p>
+                            <p><strong>Progress:</strong> 75% Complete</p>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-secondary">View Details</button>
+                            <button class="btn-primary">Update Status</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Annual Tax Return - Global Solutions LLC</h3>
+                            <div class="project-status pending">Pending Review</div>
+                        </div>
+                        <div class="project-details">
+                            <p><strong>Client:</strong> Global Solutions LLC</p>
+                            <p><strong>Service:</strong> Tax Preparation & Filing</p>
+                            <p><strong>Assigned To:</strong> Mike Chen</p>
+                            <p><strong>Due Date:</strong> Mar 15, 2025</p>
+                            <p><strong>Progress:</strong> 90% Complete</p>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-secondary">View Details</button>
+                            <button class="btn-primary">Review & Approve</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Budget Forecast 2025 - Innovation Corp</h3>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <div class="project-details">
+                            <p><strong>Client:</strong> Innovation Corp</p>
+                            <p><strong>Service:</strong> Budget & Forecasting</p>
+                            <p><strong>Assigned To:</strong> Emily Davis</p>
+                            <p><strong>Due Date:</strong> Jan 15, 2025</p>
+                            <p><strong>Progress:</strong> 100% Complete</p>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span>100%</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-secondary">View Details</button>
+                            <button class="btn-primary">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Tiers Section -->
+        <section id="service-tiers" class="portal-section">
+            <div class="section-header">
+                <h1>Service Tiers Overview</h1>
+                <p>Monitor subscription levels and service tier distribution</p>
+            </div>
+
+            <div class="tiers-overview">
+                <div class="tier-overview-card">
+                    <div class="tier-overview-header">
+                        <h3>Ad-Hoc Services</h3>
+                        <div class="tier-count">23</div>
+                    </div>
+                    <div class="tier-stats">
+                        <div class="tier-stat">
+                            <span class="stat-label">Active Projects</span>
+                            <span class="stat-value">23</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Monthly Revenue</span>
+                            <span class="stat-value">$12,450</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Avg. Project Value</span>
+                            <span class="stat-value">$541</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-overview-card featured">
+                    <div class="tier-overview-header">
+                        <h3>Monthly Services</h3>
+                        <div class="tier-count">45</div>
+                    </div>
+                    <div class="tier-stats">
+                        <div class="tier-stat">
+                            <span class="stat-label">Active Subscriptions</span>
+                            <span class="stat-value">45</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Monthly Revenue</span>
+                            <span class="stat-value">$18,900</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Avg. Monthly Value</span>
+                            <span class="stat-value">$420</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-overview-card">
+                    <div class="tier-overview-header">
+                        <h3>Quarterly Services</h3>
+                        <div class="tier-count">18</div>
+                    </div>
+                    <div class="tier-stats">
+                        <div class="tier-stat">
+                            <span class="stat-label">Active Subscriptions</span>
+                            <span class="stat-value">18</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Monthly Revenue</span>
+                            <span class="stat-value">$8,100</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Avg. Monthly Value</span>
+                            <span class="stat-value">$450</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-overview-card">
+                    <div class="tier-overview-header">
+                        <h3>Yearly Services</h3>
+                        <div class="tier-count">12</div>
+                    </div>
+                    <div class="tier-stats">
+                        <div class="tier-stat">
+                            <span class="stat-label">Active Subscriptions</span>
+                            <span class="stat-value">12</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Monthly Revenue</span>
+                            <span class="stat-value">$5,800</span>
+                        </div>
+                        <div class="tier-stat">
+                            <span class="stat-label">Avg. Monthly Value</span>
+                            <span class="stat-value">$483</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="portal-section">
+            <div class="section-header">
+                <h1>Team Management</h1>
+                <button class="btn-primary" onclick="showNewTeamModal()">
+                    <i class="fas fa-user-plus"></i>
+                    Add Team Member
+                </button>
+            </div>
+
+            <div class="team-container">
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="team-info">
+                                <h3>Sarah Johnson</h3>
+                                <p>Senior Accountant</p>
+                                <span class="team-status active">Active</span>
+                            </div>
+                            <div class="team-actions">
+                                <button class="action-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Active Projects</span>
+                                <span class="stat-value">15</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Completed This Month</span>
+                                <span class="stat-value">8</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Performance</span>
+                                <span class="stat-value">95%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="team-info">
+                                <h3>Mike Chen</h3>
+                                <p>Tax Specialist</p>
+                                <span class="team-status active">Active</span>
+                            </div>
+                            <div class="team-actions">
+                                <button class="action-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Active Projects</span>
+                                <span class="stat-value">12</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Completed This Month</span>
+                                <span class="stat-value">6</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Performance</span>
+                                <span class="stat-value">88%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="team-info">
+                                <h3>Emily Davis</h3>
+                                <p>Financial Analyst</p>
+                                <span class="team-status active">Active</span>
+                            </div>
+                            <div class="team-actions">
+                                <button class="action-icon" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-icon" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Active Projects</span>
+                                <span class="stat-value">18</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Completed This Month</span>
+                                <span class="stat-value">10</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Performance</span>
+                                <span class="stat-value">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Billing Section -->
+        <section id="billing" class="portal-section">
+            <div class="section-header">
+                <h1>Billing & Revenue</h1>
+            </div>
+
+            <div class="billing-container">
+                <div class="billing-summary">
+                    <div class="summary-card">
+                        <h3>Total Revenue</h3>
+                        <div class="balance-amount">$45,250</div>
+                        <p>This month</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Outstanding Invoices</h3>
+                        <div class="balance-amount">$12,800</div>
+                        <p>Pending payment</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Average Project Value</h3>
+                        <div class="balance-amount">$1,250</div>
+                        <p>Per project</p>
+                    </div>
+                </div>
+
+                <div class="revenue-chart">
+                    <h3>Revenue Trends</h3>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Revenue chart would be displayed here</p>
+                    </div>
+                </div>
+
+                <div class="invoices-list">
+                    <h3>Recent Invoices</h3>
+                    <div class="invoice-item">
+                        <div class="invoice-info">
+                            <h4>Invoice #2024-001</h4>
+                            <p>TechStart Inc. - Q4 Financial Statements</p>
+                            <span class="invoice-date">Dec 15, 2024</span>
+                        </div>
+                        <div class="invoice-amount">$850.00</div>
+                        <div class="invoice-status paid">Paid</div>
+                        <div class="invoice-actions">
+                            <button class="btn-secondary">Download</button>
+                        </div>
+                    </div>
+
+                    <div class="invoice-item">
+                        <div class="invoice-info">
+                            <h4>Invoice #2024-002</h4>
+                            <p>Global Solutions LLC - Annual Tax Return</p>
+                            <span class="invoice-date">Dec 10, 2024</span>
+                        </div>
+                        <div class="invoice-amount">$1,200.00</div>
+                        <div class="invoice-status pending">Pending</div>
+                        <div class="invoice-actions">
+                            <button class="btn-primary">Send Reminder</button>
+                            <button class="btn-secondary">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports" class="portal-section">
+            <div class="section-header">
+                <h1>Reports & Analytics</h1>
+                <button class="btn-primary">
+                    <i class="fas fa-download"></i>
+                    Export Report
+                </button>
+            </div>
+
+            <div class="reports-container">
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>Client Performance Report</h3>
+                        <div class="report-content">
+                            <div class="report-stat">
+                                <span class="stat-label">Total Clients</span>
+                                <span class="stat-value">156</span>
+                            </div>
+                            <div class="report-stat">
+                                <span class="stat-label">Active Clients</span>
+                                <span class="stat-value">142</span>
+                            </div>
+                            <div class="report-stat">
+                                <span class="stat-label">New This Month</span>
+                                <span class="stat-value">12</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary">Generate Report</button>
+                    </div>
+
+                    <div class="report-card">
+                        <h3>Project Performance Report</h3>
+                        <div class="report-content">
+                            <div class="report-stat">
+                                <span class="stat-label">Total Projects</span>
+                                <span class="stat-value">342</span>
+                            </div>
+                            <div class="report-stat">
+                                <span class="stat-label">Completed</span>
+                                <span class="stat-value">298</span>
+                            </div>
+                            <div class="report-stat">
+                                <span class="stat-label">On-Time Delivery</span>
+                                <span class="stat-value">89%</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary">Generate Report</button>
+                    </div>
+
+                    <div class="report-card">
+                        <h3>Revenue Report</h3>
+                        <div class="report-content">
+                            <div class="report-stat">
+                                <span class="stat-label">Monthly Revenue</span>
+                                <span class="stat-value">$45,250</span>
+                            </div>
+                            <div class="report-stat">
+                                <span class="stat-label">YTD Revenue</span>
+                                <span class="stat-value">$542,000</span>
+                            </div>
+                            <div class="report-stat">
+                                <span class="stat-label">Growth Rate</span>
+                                <span class="stat-value">+15%</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary">Generate Report</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="portal-section">
+            <div class="section-header">
+                <h1>System Settings</h1>
+            </div>
+
+            <div class="settings-container">
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <h3>General Settings</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" value="FinancialWorkPapers Pro">
+                            </div>
+                            <div class="form-group">
+                                <label>Admin Email</label>
+                                <input type="email" value="admin@financialworkpaperspro.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Time Zone</label>
+                                <select>
+                                    <option>Eastern Time (ET)</option>
+                                    <option>Central Time (CT)</option>
+                                    <option>Mountain Time (MT)</option>
+                                    <option>Pacific Time (PT)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Security Settings</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Two-Factor Authentication</label>
+                                <select>
+                                    <option>Enabled</option>
+                                    <option>Disabled</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Session Timeout</label>
+                                <select>
+                                    <option>30 minutes</option>
+                                    <option>1 hour</option>
+                                    <option>2 hours</option>
+                                    <option>4 hours</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Password Policy</label>
+                                <select>
+                                    <option>Strong (8+ chars, symbols)</option>
+                                    <option>Medium (6+ chars)</option>
+                                    <option>Basic (4+ chars)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- New Client Modal -->
+    <div id="newClientModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewClientModal()">&times;</span>
+            <h2>Add New Client</h2>
+            <form class="client-form">
+                <div class="form-group">
+                    <label for="clientName">Company Name</label>
+                    <input type="text" id="clientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientContact">Primary Contact</label>
+                    <input type="text" id="clientContact" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientEmail">Email Address</label>
+                    <input type="email" id="clientEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPhone">Phone Number</label>
+                    <input type="tel" id="clientPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientIndustry">Industry</label>
+                    <select id="clientIndustry" required>
+                        <option value="">Select Industry</option>
+                        <option value="technology">Technology</option>
+                        <option value="consulting">Consulting</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="retail">Retail</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="clientNotes">Notes</label>
+                    <textarea id="clientNotes" rows="3" placeholder="Additional notes about the client..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeNewClientModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Add Client</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Team Member Modal -->
+    <div id="newTeamModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewTeamModal()">&times;</span>
+            <h2>Add New Team Member</h2>
+            <form class="team-form">
+                <div class="form-group">
+                    <label for="teamName">Full Name</label>
+                    <input type="text" id="teamName" required>
+                </div>
+                <div class="form-group">
+                    <label for="teamEmail">Email Address</label>
+                    <input type="email" id="teamEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="teamRole">Role</label>
+                    <select id="teamRole" required>
+                        <option value="">Select Role</option>
+                        <option value="senior-accountant">Senior Accountant</option>
+                        <option value="tax-specialist">Tax Specialist</option>
+                        <option value="financial-analyst">Financial Analyst</option>
+                        <option value="bookkeeper">Bookkeeper</option>
+                        <option value="assistant">Assistant</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="teamDepartment">Department</label>
+                    <select id="teamDepartment" required>
+                        <option value="">Select Department</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="tax">Tax</option>
+                        <option value="audit">Audit</option>
+                        <option value="consulting">Consulting</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="teamStartDate">Start Date</label>
+                    <input type="date" id="teamStartDate" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeNewTeamModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Add Team Member</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="portal-script.js"></script>
+</body>
+</html> 
