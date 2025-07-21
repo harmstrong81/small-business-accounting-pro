@@ -692,6 +692,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, select, textarea, .s
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
 }
 
 .form-group {
@@ -1052,4 +1054,20 @@ a:hover, .service-link:hover {
 
 .service-card p, .tier-card p, .testimonial-card p, .process-step p {
     color: var(--black) !important;
+} 
+
+@media (max-width: 768px) {
+  .nav-logo img {
+    height: 40px;
+    max-width: 120px;
+  }
+  .nav-logo {
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .nav-logo img {
+    height: 32px;
+    max-width: 90px;
+  }
 } 
