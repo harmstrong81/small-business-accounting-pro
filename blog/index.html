@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Small Business Accounting Pro</title>
+    <meta name="description" content="Explore expert articles, calculators, and guides for small business owners. Accounting, tax, and business growth insights from Small Business Accounting Pro." />
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { background: #f7f9fb; font-family: 'Inter', Arial, sans-serif; margin: 0; }
+        .hero {
+            background: linear-gradient(120deg, #3b7ddd 0%, #8eb6e5 100%);
+            color: #fff;
+            padding: 0.7rem 1rem 0.7rem 1rem;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 24px rgba(18, 62, 129, 0.07);
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .blog-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 3rem 0 2rem 0;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(59,125,221,0.08);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            max-width: 340px;
+            min-width: 260px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+        }
+        .blog-card:hover {
+            box-shadow: 0 8px 32px rgba(59,125,221,0.18);
+            transform: translateY(-4px) scale(1.02);
+        }
+        .blog-card h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+            color: #3b7ddd;
+        }
+        .blog-card p {
+            color: #4a5a6a;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .blog-card .spacer {
+            flex: 1 1 auto;
+            min-height: 10px;
+        }
+        .blog-card a {
+            text-decoration: none;
+            color: #fff;
+            background: #3b7ddd;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s;
+            align-self: flex-end;
+        }
+        .blog-card a:hover {
+            background: #285bb5;
+        }
+        .back-link {
+            display: block;
+            margin: 2rem auto 0 auto;
+            text-align: center;
+            color: #3b7ddd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Insights & Tools for Small Business Owners</h1>
+        <p>Explore our latest articles, calculators, and guides to help your business grow. Stay tuned for new posts and resources!</p>
+    </div>
+    <div class="container">
+        <ul class="blog-list">
+            <li class="blog-card">
+                <h2>Break-Even, Profit Margin & Loan Calculators</h2>
+                <p>Three essential calculators for entrepreneurs: break-even, profit margin, and loan payment. Try them all in one place.</p>
+                <div class="spacer"></div>
+                <a href="break-even-calculator.html">Read More &rarr;</a>
+            </li>
+            <li class="blog-card">
+                <h2>Why Your Business Needs Consultants</h2>
+                <p>Discover how expert consultants can help your business grow, solve problems, and stay competitive in today’s fast-changing world.</p>
+                <div class="spacer"></div>
+                <a href="why-your-business-needs-consultants.html">Read More &rarr;</a>
+            </li>
+            <li class="blog-card">
+                <h2>How to Choose the Right Accounting Software</h2>
+                <p>Find the best accounting solution for your business needs with this practical guide to features, comparisons, and tips.</p>
+                <div class="spacer"></div>
+                <a href="how-to-choose-accounting-software.html">Read More &rarr;</a>
+            </li>
+            <li class="blog-card">
+                <h2>Top Tax Deductions for Small Business Owners</h2>
+                <p>Maximize your savings and stay compliant by understanding the most valuable tax deductions for your business.</p>
+                <div class="spacer"></div>
+                <a href="top-tax-deductions.html">Read More &rarr;</a>
+            </li>
+            <li class="blog-card">
+                <h2>Cash Flow Management Tips for Growing Businesses</h2>
+                <p>Keep your business healthy and ready for growth with these practical cash flow management strategies.</p>
+                <div class="spacer"></div>
+                <a href="cash-flow-management-tips.html">Read More &rarr;</a>
+            </li>
+            <!-- Future blog posts can be added here as more <li class="blog-card"> elements -->
+        </ul>
+        <a class="back-link" href="../index.html">&larr; Back to Home</a>
+    </div>
+</body>
+</html> 

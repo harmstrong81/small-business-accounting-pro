@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Helpful Business Calculators Every Entrepreneur Should Use</title>
+    <meta name="description" content="Try our break-even, profit margin, and loan payment calculators for small business owners. Make smarter financial decisions with these essential tools." />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "3 Helpful Business Calculators Every Entrepreneur Should Use",
+      "description": "Try our break-even, profit margin, and loan payment calculators for small business owners. Make smarter financial decisions with these essential tools.",
+      "author": {"@type": "Organization", "name": "Small Business Accounting Pro"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://smallbusinessaccountingpro.com/blog/break-even-calculator.html"},
+      "datePublished": "2024-07-21"
+    }
+    </script>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { background: #f7f9fb; font-family: 'Inter', Arial, sans-serif; margin: 0; }
+        .hero {
+            background: linear-gradient(120deg, #3b7ddd 0%, #8eb6e5 100%);
+            color: #fff;
+            padding: 0.7rem 1rem 0.7rem 1rem;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 24px rgba(59,125,221,0.07);
+        }
+        .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.05rem; margin: 0 auto; max-width: 600px; }
+        .content { max-width: 700px; margin: 1.5rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 16px rgba(59,125,221,0.08); padding: 2rem 1.5rem; }
+        h2 { color: #3b7ddd; margin-top: 2rem; }
+        .calculator-section { margin-bottom: 2.5rem; }
+        .formula { background: #f0f4fa; border-radius: 8px; padding: 0.7rem 1rem; font-family: monospace; margin: 0.7rem 0 1rem 0; color: #285bb5; }
+        .calculator { margin: 1.2rem 0; }
+        .calculator label { display: block; margin-bottom: 0.5rem; color: #2a3a5e; }
+        .calculator input { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #cfd8dc; font-size: 1rem; }
+        .calculator button { background: #3b7ddd; color: #fff; border: none; border-radius: 6px; padding: 0.7rem 1.5rem; font-size: 1rem; cursor: pointer; font-weight: 600; transition: background 0.2s; }
+        .calculator button:hover { background: #285bb5; }
+        .result { margin-top: 1rem; font-weight: bold; color: #2a3a5e; font-size: 1.1rem; }
+        .back-link { display: block; margin: 2rem auto 0 auto; text-align: center; color: #3b7ddd; text-decoration: none; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>3 Helpful Business Calculators Every Entrepreneur Should Use</h1>
+        <p>Save time and make smarter decisions with these essential calculators for small business owners: Break-Even, Profit Margin, and Loan Payment.</p>
+    </div>
+    <div class="content">
+        <!-- Break-Even Calculator -->
+        <div class="calculator-section">
+            <h2>1. Break-Even Calculator</h2>
+            <p>Find out how many sales you need to cover your costs and start making a profit.</p>
+            <div class="formula">Break-Even Point (Units) = Fixed Costs / (Unit Price - Variable Cost per Unit)</div>
+            <form class="calculator" id="beForm" onsubmit="event.preventDefault(); calculateBE();">
+                <label>Fixed Costs ($):
+                    <input type="number" id="fixed" min="0" required>
+                </label>
+                <label>Unit Price ($):
+                    <input type="number" id="price" min="0" required>
+                </label>
+                <label>Variable Cost per Unit ($):
+                    <input type="number" id="variable" min="0" required>
+                </label>
+                <button type="submit">Calculate Break-Even</button>
+            </form>
+            <div class="result" id="beResult"></div>
+        </div>
+        <!-- Profit Margin Calculator -->
+        <div class="calculator-section">
+            <h2>2. Profit Margin Calculator</h2>
+            <p>Quickly calculate your profit margin to understand your business’s profitability.</p>
+            <div class="formula">Profit Margin (%) = [(Revenue - Cost) / Revenue] × 100</div>
+            <form class="calculator" id="pmForm" onsubmit="event.preventDefault(); calculatePM();">
+                <label>Revenue ($):
+                    <input type="number" id="pmRevenue" min="0" required>
+                </label>
+                <label>Cost ($):
+                    <input type="number" id="pmCost" min="0" required>
+                </label>
+                <button type="submit">Calculate Profit Margin</button>
+            </form>
+            <div class="result" id="pmResult"></div>
+        </div>
+        <!-- Loan Payment Calculator -->
+        <div class="calculator-section">
+            <h2>3. Loan Payment Calculator</h2>
+            <p>Estimate your monthly loan payment to plan your business finances.</p>
+            <div class="formula">Monthly Payment = [P × r × (1 + r)<sup>n</sup>] / [(1 + r)<sup>n</sup> - 1]</div>
+            <form class="calculator" id="loanForm" onsubmit="event.preventDefault(); calculateLoan();">
+                <label>Loan Amount ($):
+                    <input type="number" id="loanAmount" min="0" required>
+                </label>
+                <label>Annual Interest Rate (%):
+                    <input type="number" id="loanRate" min="0" step="0.01" required>
+                </label>
+                <label>Loan Term (years):
+                    <input type="number" id="loanYears" min="1" required>
+                </label>
+                <button type="submit">Calculate Payment</button>
+            </form>
+            <div class="result" id="loanResult"></div>
+        </div>
+        <a class="back-link" href="index.html">&larr; Back to Blog</a>
+        <a class="back-link" style="background:#3b7ddd;color:#fff;padding:0.7rem 1.5rem;border-radius:6px;display:inline-block;margin-top:1.5rem;font-weight:600;" href="../index.html#contact">Contact Us</a>
+    </div>
+    <script>
+    function calculateBE() {
+        var fixed = parseFloat(document.getElementById('fixed').value);
+        var price = parseFloat(document.getElementById('price').value);
+        var variable = parseFloat(document.getElementById('variable').value);
+        if (price <= variable) {
+            document.getElementById('beResult').innerText = 'Unit price must be greater than variable cost per unit.';
+            return;
+        }
+        var be = fixed / (price - variable);
+        document.getElementById('beResult').innerText = 'Break-Even Point: ' + be.toFixed(2) + ' units';
+    }
+    function calculatePM() {
+        var revenue = parseFloat(document.getElementById('pmRevenue').value);
+        var cost = parseFloat(document.getElementById('pmCost').value);
+        if (revenue <= 0) {
+            document.getElementById('pmResult').innerText = 'Revenue must be greater than 0.';
+            return;
+        }
+        var margin = ((revenue - cost) / revenue) * 100;
+        document.getElementById('pmResult').innerText = 'Profit Margin: ' + margin.toFixed(2) + '%';
+    }
+    function calculateLoan() {
+        var amount = parseFloat(document.getElementById('loanAmount').value);
+        var rate = parseFloat(document.getElementById('loanRate').value) / 100 / 12;
+        var years = parseFloat(document.getElementById('loanYears').value);
+        var n = years * 12;
+        if (rate === 0) {
+            var payment = amount / n;
+        } else {
+            var payment = (amount * rate * Math.pow(1 + rate, n)) / (Math.pow(1 + rate, n) - 1);
+        }
+        document.getElementById('loanResult').innerText = 'Monthly Payment: $' + payment.toFixed(2);
+    }
+    </script>
+</body>
+</html> 
