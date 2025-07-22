@@ -1072,3 +1072,30 @@ a:hover, .service-link:hover {
     max-width: 90px;
   }
 } 
+
+/* Hide only the navbar and Get Started button on mobile */
+@media (max-width: 767px) {
+  .navbar,
+  .nav-btn {
+    display: none !important;
+  }
+  .mobile-logo-only {
+    display: block !important;
+    padding: 0.5rem 0 0 0;
+    background: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+}
+
+/* Hide the mobile logo on desktop */
+@media (min-width: 768px) {
+  .mobile-logo-only {
+    display: none !important;
+  }
+} 
