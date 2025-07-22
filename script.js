@@ -111,6 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => {
             if (response.ok) {
                 showSuccess();
+                // Google Ads Conversion Tracking
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17382514451/1xxlCNrssvYaEJO-0OBA',
+                    'value': 1.0,
+                    'currency': 'USD'
+                });
                 contactForm.reset();
             } else {
                 throw new Error('Form submission failed');
